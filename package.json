@@ -1,0 +1,33 @@
+{
+  "name": "sample_node_eb_paas",
+  "version": "0.0.0",
+  "description": "Testing eb deploy",
+  "main": "server.js",
+  "author": "shippable",
+  "version": "0.0.0",
+  "keywords": [],
+  "homepage": "https://github.com/shippable/sample_node_eb_paas",
+  "scripts": {
+    "test": "grunt",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Shippable/sample_node_eb_paas.git"
+  },
+  "contributors": [],
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.2.0",
+    "nano": "^5.10.0",
+    "serve-favicon": "^2.3.0",
+    "nightwatch": "~0.5.10"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "scripts": {
+    "test": "node ./server.js & ./node_modules/.bin/nightwatch"
+  }
+}
+
