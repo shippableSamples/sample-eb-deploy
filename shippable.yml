@@ -1,0 +1,14 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+services:
+  - selenium
+
+build:
+    ci:
+      - sudo npm install
+      - export DISPLAY=:99.0
+      - xvfb-run --server-args="-ac" npm test
+      - if [[ $IS_FORK == false && $BRANCH == 'master' ]] ; then echo versionName=$BUILD_NUMBER >> "/build/state/app-version.env";echo commitSha=$COMMIT >> "/build/state/app-version.env";fi
